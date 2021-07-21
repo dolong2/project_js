@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        document.writeln(2);
+        var cnt=0;
+        for(var i=3;i<1000;i++){
+            if(prime(i)!=0){document.writeln(i);}
+        }
+        document.writeln(cnt+1);
+        function prime(i){
+            for(var j=2;j<i;j++){
+                if(i%j==0){
+                    return 0;
+                }
+            }
+            cnt++;
+            return i;
+        }
+    </script>
+</body>
+</html>

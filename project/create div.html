@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function createDIV(){
+        var obj=document.getElementById('parent');
+        var div=document.createElement('div');
+        div.innerHTML='새로생성됨';
+        div.setAttribute('id','mydiv');
+        div.style.backgroundColor='yellow';
+        div.onclick=function(){
+            var p=this.parentElement;
+            p.removeChild(this);
+        }
+        obj.appendChild(div);
+    }
+    </script>
+</head>
+<body id='parent'>
+    <a href="javascript:createDIV()">Div생성</a>
+</body>
+</html>
